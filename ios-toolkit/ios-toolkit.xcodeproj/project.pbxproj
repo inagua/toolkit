@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7003A0D614D16C8A003E57BF /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 7003A0D514D16C8A003E57BF /* Sound.m */; };
+		7003A0D814D16E22003E57BF /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 7003A0D714D16E22003E57BF /* Sounds */; };
+		7003A0DD14D16EBB003E57BF /* SoundTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7003A0DB14D16EA7003E57BF /* SoundTest.m */; };
+		7003A0DF14D16F2F003E57BF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7003A0DE14D16F2F003E57BF /* AVFoundation.framework */; };
+		7003A0E014D1721A003E57BF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7003A0DE14D16F2F003E57BF /* AVFoundation.framework */; };
 		C447331D14CEBC4700F8E91D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C447331C14CEBC4700F8E91D /* UIKit.framework */; };
 		C447331F14CEBC4700F8E91D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C447331E14CEBC4700F8E91D /* Foundation.framework */; };
 		C447332114CEBC4700F8E91D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C447332014CEBC4700F8E91D /* CoreGraphics.framework */; };
@@ -40,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7003A0D414D16C8A003E57BF /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
+		7003A0D514D16C8A003E57BF /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
+		7003A0D714D16E22003E57BF /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		7003A0DA14D16EA7003E57BF /* SoundTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundTest.h; sourceTree = "<group>"; };
+		7003A0DB14D16EA7003E57BF /* SoundTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundTest.m; sourceTree = "<group>"; };
+		7003A0DE14D16F2F003E57BF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C447331814CEBC4700F8E91D /* ios-toolkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-toolkit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C447331C14CEBC4700F8E91D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C447331E14CEBC4700F8E91D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -79,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7003A0DF14D16F2F003E57BF /* AVFoundation.framework in Frameworks */,
 				C447331D14CEBC4700F8E91D /* UIKit.framework in Frameworks */,
 				C447331F14CEBC4700F8E91D /* Foundation.framework in Frameworks */,
 				C447332114CEBC4700F8E91D /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7003A0E014D1721A003E57BF /* AVFoundation.framework in Frameworks */,
 				C447334214CEBC4700F8E91D /* UIKit.framework in Frameworks */,
 				C447334314CEBC4700F8E91D /* Foundation.framework in Frameworks */,
 				C447334414CEBC4700F8E91D /* CoreGraphics.framework in Frameworks */,
@@ -98,9 +111,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7003A0D114D16AC8003E57BF /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				7003A0D714D16E22003E57BF /* Sounds */,
+				7003A0D414D16C8A003E57BF /* Sound.h */,
+				7003A0D514D16C8A003E57BF /* Sound.m */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		7003A0D914D16E36003E57BF /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				7003A0DA14D16EA7003E57BF /* SoundTest.h */,
+				7003A0DB14D16EA7003E57BF /* SoundTest.m */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		C447330D14CEBC4700F8E91D = {
 			isa = PBXGroup;
 			children = (
+				7003A0DE14D16F2F003E57BF /* AVFoundation.framework */,
 				C447332214CEBC4700F8E91D /* ios-toolkit */,
 				C447334714CEBC4700F8E91D /* ios-toolkitTests */,
 				C447331B14CEBC4700F8E91D /* Frameworks */,
@@ -174,6 +207,7 @@
 		C447334714CEBC4700F8E91D /* ios-toolkitTests */ = {
 			isa = PBXGroup;
 			children = (
+				7003A0D914D16E36003E57BF /* Sounds */,
 				C447337B14CEBDEB00F8E91D /* Categories */,
 				C447334814CEBC4700F8E91D /* Supporting Files */,
 			);
@@ -193,6 +227,7 @@
 		C447336214CEBD9600F8E91D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7003A0D114D16AC8003E57BF /* Sounds */,
 				C447336314CEBD9600F8E91D /* Categories */,
 			);
 			path = Common;
@@ -297,6 +332,7 @@
 				C447332714CEBC4700F8E91D /* InfoPlist.strings in Resources */,
 				C447333414CEBC4700F8E91D /* MainWindow_iPhone.xib in Resources */,
 				C447333B14CEBC4700F8E91D /* MainWindow_iPad.xib in Resources */,
+				7003A0D814D16E22003E57BF /* Sounds in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +376,7 @@
 				C447337214CEBD9600F8E91D /* UIImage+Resize.m in Sources */,
 				C447337414CEBD9600F8E91D /* UIView+Translate.m in Sources */,
 				C447337514CEBD9600F8E91D /* UIView+Utils.m in Sources */,
+				7003A0D614D16C8A003E57BF /* Sound.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C447337E14CEBDEB00F8E91D /* NSString+UtilsTest.m in Sources */,
+				7003A0DD14D16EBB003E57BF /* SoundTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
