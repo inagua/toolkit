@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7003A0D614D16C8A003E57BF /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 7003A0D514D16C8A003E57BF /* Sound.m */; };
-		7003A0D814D16E22003E57BF /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 7003A0D714D16E22003E57BF /* Sounds */; };
+		3192471914FD2E9900F87868 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 3192471514FD2E9900F87868 /* Sound.m */; };
+		3192471A14FD2E9900F87868 /* car_start.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3192471714FD2E9900F87868 /* car_start.aiff */; };
+		3192471B14FD2E9900F87868 /* clear_sound.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 3192471814FD2E9900F87868 /* clear_sound.aiff */; };
+		3192472114FD2F1900F87868 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3192471E14FD2F1900F87868 /* Reachability.m */; };
+		3192472214FD2F1900F87868 /* ReachabilityObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3192472014FD2F1900F87868 /* ReachabilityObserver.m */; };
+		3192472814FD2FEC00F87868 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3192472714FD2FEC00F87868 /* SystemConfiguration.framework */; };
 		7003A0DD14D16EBB003E57BF /* SoundTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7003A0DB14D16EA7003E57BF /* SoundTest.m */; };
 		7003A0DF14D16F2F003E57BF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7003A0DE14D16F2F003E57BF /* AVFoundation.framework */; };
 		7003A0E014D1721A003E57BF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7003A0DE14D16F2F003E57BF /* AVFoundation.framework */; };
@@ -45,9 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7003A0D414D16C8A003E57BF /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
-		7003A0D514D16C8A003E57BF /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
-		7003A0D714D16E22003E57BF /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		3192471414FD2E9900F87868 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
+		3192471514FD2E9900F87868 /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
+		3192471714FD2E9900F87868 /* car_start.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = car_start.aiff; sourceTree = "<group>"; };
+		3192471814FD2E9900F87868 /* clear_sound.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = clear_sound.aiff; sourceTree = "<group>"; };
+		3192471D14FD2F1900F87868 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		3192471E14FD2F1900F87868 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		3192471F14FD2F1900F87868 /* ReachabilityObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachabilityObserver.h; sourceTree = "<group>"; };
+		3192472014FD2F1900F87868 /* ReachabilityObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachabilityObserver.m; sourceTree = "<group>"; };
+		3192472714FD2FEC00F87868 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7003A0DA14D16EA7003E57BF /* SoundTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundTest.h; sourceTree = "<group>"; };
 		7003A0DB14D16EA7003E57BF /* SoundTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundTest.m; sourceTree = "<group>"; };
 		7003A0DE14D16F2F003E57BF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3192472814FD2FEC00F87868 /* SystemConfiguration.framework in Frameworks */,
 				7003A0DF14D16F2F003E57BF /* AVFoundation.framework in Frameworks */,
 				C447331D14CEBC4700F8E91D /* UIKit.framework in Frameworks */,
 				C447331F14CEBC4700F8E91D /* Foundation.framework in Frameworks */,
@@ -111,14 +122,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7003A0D114D16AC8003E57BF /* Sounds */ = {
+		3192471314FD2E9900F87868 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				7003A0D714D16E22003E57BF /* Sounds */,
-				7003A0D414D16C8A003E57BF /* Sound.h */,
-				7003A0D514D16C8A003E57BF /* Sound.m */,
+				3192471414FD2E9900F87868 /* Sound.h */,
+				3192471514FD2E9900F87868 /* Sound.m */,
+				3192471614FD2E9900F87868 /* Sounds */,
 			);
-			name = Sounds;
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		3192471614FD2E9900F87868 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				3192471714FD2E9900F87868 /* car_start.aiff */,
+				3192471814FD2E9900F87868 /* clear_sound.aiff */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		3192471C14FD2F1900F87868 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				3192471D14FD2F1900F87868 /* Reachability.h */,
+				3192471E14FD2F1900F87868 /* Reachability.m */,
+				3192471F14FD2F1900F87868 /* ReachabilityObserver.h */,
+				3192472014FD2F1900F87868 /* ReachabilityObserver.m */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 		7003A0D914D16E36003E57BF /* Sounds */ = {
@@ -133,7 +164,6 @@
 		C447330D14CEBC4700F8E91D = {
 			isa = PBXGroup;
 			children = (
-				7003A0DE14D16F2F003E57BF /* AVFoundation.framework */,
 				C447332214CEBC4700F8E91D /* ios-toolkit */,
 				C447334714CEBC4700F8E91D /* ios-toolkitTests */,
 				C447331B14CEBC4700F8E91D /* Frameworks */,
@@ -153,6 +183,8 @@
 		C447331B14CEBC4700F8E91D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3192472714FD2FEC00F87868 /* SystemConfiguration.framework */,
+				7003A0DE14D16F2F003E57BF /* AVFoundation.framework */,
 				C447331C14CEBC4700F8E91D /* UIKit.framework */,
 				C447331E14CEBC4700F8E91D /* Foundation.framework */,
 				C447332014CEBC4700F8E91D /* CoreGraphics.framework */,
@@ -227,7 +259,8 @@
 		C447336214CEBD9600F8E91D /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				7003A0D114D16AC8003E57BF /* Sounds */,
+				3192471C14FD2F1900F87868 /* Reachability */,
+				3192471314FD2E9900F87868 /* Sound */,
 				C447336314CEBD9600F8E91D /* Categories */,
 			);
 			path = Common;
@@ -332,7 +365,8 @@
 				C447332714CEBC4700F8E91D /* InfoPlist.strings in Resources */,
 				C447333414CEBC4700F8E91D /* MainWindow_iPhone.xib in Resources */,
 				C447333B14CEBC4700F8E91D /* MainWindow_iPad.xib in Resources */,
-				7003A0D814D16E22003E57BF /* Sounds in Resources */,
+				3192471A14FD2E9900F87868 /* car_start.aiff in Resources */,
+				3192471B14FD2E9900F87868 /* clear_sound.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +410,9 @@
 				C447337214CEBD9600F8E91D /* UIImage+Resize.m in Sources */,
 				C447337414CEBD9600F8E91D /* UIView+Translate.m in Sources */,
 				C447337514CEBD9600F8E91D /* UIView+Utils.m in Sources */,
-				7003A0D614D16C8A003E57BF /* Sound.m in Sources */,
+				3192471914FD2E9900F87868 /* Sound.m in Sources */,
+				3192472114FD2F1900F87868 /* Reachability.m in Sources */,
+				3192472214FD2F1900F87868 /* ReachabilityObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
