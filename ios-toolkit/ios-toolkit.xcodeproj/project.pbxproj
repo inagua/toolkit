@@ -16,6 +16,9 @@
 		7003A0DD14D16EBB003E57BF /* SoundTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7003A0DB14D16EA7003E57BF /* SoundTest.m */; };
 		7003A0DF14D16F2F003E57BF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7003A0DE14D16F2F003E57BF /* AVFoundation.framework */; };
 		7003A0E014D1721A003E57BF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7003A0DE14D16F2F003E57BF /* AVFoundation.framework */; };
+		7076679C153D6E74006C7F78 /* DocumentsFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7076679B153D6E74006C7F78 /* DocumentsFinder.m */; };
+		7076679F153D70AC006C7F78 /* FileInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7076679E153D70AC006C7F78 /* FileInfo.m */; };
+		707667A4153D7523006C7F78 /* DocumentsFinderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 707667A3153D7523006C7F78 /* DocumentsFinderTest.m */; };
 		C447331D14CEBC4700F8E91D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C447331C14CEBC4700F8E91D /* UIKit.framework */; };
 		C447331F14CEBC4700F8E91D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C447331E14CEBC4700F8E91D /* Foundation.framework */; };
 		C447332114CEBC4700F8E91D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C447332014CEBC4700F8E91D /* CoreGraphics.framework */; };
@@ -61,6 +64,12 @@
 		7003A0DA14D16EA7003E57BF /* SoundTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundTest.h; sourceTree = "<group>"; };
 		7003A0DB14D16EA7003E57BF /* SoundTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundTest.m; sourceTree = "<group>"; };
 		7003A0DE14D16F2F003E57BF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7076679A153D6E74006C7F78 /* DocumentsFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentsFinder.h; sourceTree = "<group>"; };
+		7076679B153D6E74006C7F78 /* DocumentsFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentsFinder.m; sourceTree = "<group>"; };
+		7076679D153D70AC006C7F78 /* FileInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileInfo.h; sourceTree = "<group>"; };
+		7076679E153D70AC006C7F78 /* FileInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileInfo.m; sourceTree = "<group>"; };
+		707667A2153D7523006C7F78 /* DocumentsFinderTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocumentsFinderTest.h; sourceTree = "<group>"; };
+		707667A3153D7523006C7F78 /* DocumentsFinderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentsFinderTest.m; sourceTree = "<group>"; };
 		C447331814CEBC4700F8E91D /* ios-toolkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-toolkit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C447331C14CEBC4700F8E91D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C447331E14CEBC4700F8E91D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -161,6 +170,26 @@
 			name = Sounds;
 			sourceTree = "<group>";
 		};
+		70766798153D6D4D006C7F78 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				7076679D153D70AC006C7F78 /* FileInfo.h */,
+				7076679E153D70AC006C7F78 /* FileInfo.m */,
+				7076679A153D6E74006C7F78 /* DocumentsFinder.h */,
+				7076679B153D6E74006C7F78 /* DocumentsFinder.m */,
+			);
+			name = File;
+			sourceTree = "<group>";
+		};
+		707667A1153D74B1006C7F78 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				707667A2153D7523006C7F78 /* DocumentsFinderTest.h */,
+				707667A3153D7523006C7F78 /* DocumentsFinderTest.m */,
+			);
+			name = File;
+			sourceTree = "<group>";
+		};
 		C447330D14CEBC4700F8E91D = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +268,7 @@
 		C447334714CEBC4700F8E91D /* ios-toolkitTests */ = {
 			isa = PBXGroup;
 			children = (
+				707667A1153D74B1006C7F78 /* File */,
 				7003A0D914D16E36003E57BF /* Sounds */,
 				C447337B14CEBDEB00F8E91D /* Categories */,
 				C447334814CEBC4700F8E91D /* Supporting Files */,
@@ -259,6 +289,7 @@
 		C447336214CEBD9600F8E91D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				70766798153D6D4D006C7F78 /* File */,
 				3192471C14FD2F1900F87868 /* Reachability */,
 				3192471314FD2E9900F87868 /* Sound */,
 				C447336314CEBD9600F8E91D /* Categories */,
@@ -413,6 +444,8 @@
 				3192471914FD2E9900F87868 /* Sound.m in Sources */,
 				3192472114FD2F1900F87868 /* Reachability.m in Sources */,
 				3192472214FD2F1900F87868 /* ReachabilityObserver.m in Sources */,
+				7076679C153D6E74006C7F78 /* DocumentsFinder.m in Sources */,
+				7076679F153D70AC006C7F78 /* FileInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +455,7 @@
 			files = (
 				C447337E14CEBDEB00F8E91D /* NSString+UtilsTest.m in Sources */,
 				7003A0DD14D16EBB003E57BF /* SoundTest.m in Sources */,
+				707667A4153D7523006C7F78 /* DocumentsFinderTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
