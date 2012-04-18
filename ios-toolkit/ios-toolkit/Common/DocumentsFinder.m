@@ -17,17 +17,22 @@
     return [NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
 }
 
-- (NSArray *) infoForFiles:(NSArray *) files inDirectory:(NSString *)directory suffixed:(NSString *)suffix {
-    NSMutableArray* filesAndProperties = [NSMutableArray arrayWithCapacity:[files count]];
-    for(NSString* file in files) {
-        NSString* filePath = [directory stringByAppendingPathComponent:file];
+- (NSArray *) infoForFileNames:(NSArray *) fileNames inDirectory:(NSString *)directory suffixed:(NSString *)suffix {
+
+    NSMutableArray* filesAndProperties = [NSMutableArray arrayWithCapacity:[fileNames count]];
+
+    for(NSString *fileName in fileNames) {
+        NSString *filePath = [directory stringByAppendingPathComponent:fileName];
         
         if ([filePath hasSuffix:suffix]) {            
-            NSDictionary* properties    = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil];
-            NSDate* modificationDate    = [properties objectForKey:NSFileModificationDate];                        
+            NSDictionary *properties    = [[NSFileManager defaultManager] attributesOfItemAtPath:filePath error:nil];
+            NSDate *modificationDate    = [properties objectForKey:NSFileModificationDate];                        
+            NSNumber *fileSize          = [properties objectForKey:NSFileSize];                        
+            
             [filesAndProperties addObject:[NSDictionary dictionaryWithObjectsAndKeys:
-                                           file,                @"path",
+                                           fileName,            @"fileName",
                                            modificationDate,    NSFileModificationDate,
+                                           fileSize,            NSFileSize,
                                            nil]];                             
         }
     }
@@ -39,10 +44,10 @@
 - (NSArray *) listFilesWithSuffix:(NSString *)suffix {
     
     NSString *documentsDirectory    = [self documentsDirectory];        
-    NSArray *files                  = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectory error:nil];
-    NSMutableArray *result          = [NSMutableArray arrayWithCapacity:[files count]];
+    NSArray *fileNames              = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsDirectory error:nil];
+    NSMutableArray *result          = [NSMutableArray arrayWithCapacity:[fileNames count]];
     
-    NSArray* filesAndProperties     = [self infoForFiles:files inDirectory:documentsDirectory suffixed:suffix];
+    NSArray* filesAndProperties     = [self infoForFileNames:fileNames inDirectory:documentsDirectory suffixed:suffix];
     
     NSArray* sortedFiles            = [filesAndProperties sortedArrayUsingComparator:^(id path1, id path2) {                               
         return [[path2 objectForKey:NSFileModificationDate] 
@@ -50,8 +55,9 @@
     }];
     
     for (NSDictionary *fileAndProperty in sortedFiles) {
-        FileInfo *newFileInfo = [[FileInfo alloc] initWithFileName:[fileAndProperty objectForKey:@"path"]
-                                               andModificationDate:[fileAndProperty objectForKey:NSFileModificationDate]];
+        FileInfo *newFileInfo = [[FileInfo alloc] initWithFileName:[fileAndProperty objectForKey:@"fileName"]
+                                                          fileSize:[fileAndProperty objectForKey:NSFileSize]
+                                                   modificationDate:[fileAndProperty objectForKey:NSFileModificationDate]];
         [result addObject:newFileInfo];
     }
     

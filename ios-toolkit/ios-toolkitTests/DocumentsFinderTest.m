@@ -55,8 +55,12 @@
     STAssertEquals((int)[files count], 2, @"");         
     FileInfo *fileInfo1 = [files objectAtIndex:0];
     FileInfo *fileInfo2 = [files objectAtIndex:1];        
-    STAssertEqualObjects(fileInfo1.fileName, @"first.test1", @"");    
+
+    STAssertEqualObjects(fileInfo1.fileName, @"first.test1", @""); 
+    STAssertEquals([fileInfo1.fileSize intValue], 11, @""); 
+    
     STAssertEqualObjects(fileInfo2.fileName, @"second.test1", @"");
+    STAssertEquals([fileInfo2.fileSize intValue], 12, @""); 
 }
 
 @end
